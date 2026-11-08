@@ -176,3 +176,36 @@ cc_prebuilt_binary {
     relative_install_path: "hw",
     soc_specific: true,
 }
+
+// ---- APK dari modul (priv-app/app) ----
+android_app_import {
+    name: "daxService",
+    apk: "proprietary/system/priv-app/daxService/daxService.apk",
+    privileged: true,
+    presigned: true,
+    dex_preopt: {
+        enabled: false,
+    },
+    preprocessed: true,
+}
+
+android_app_import {
+    name: "MotorolaSettingsProvider",
+    apk: "proprietary/system/priv-app/MotorolaSettingsProvider/MotorolaSettingsProvider.apk",
+    privileged: true,
+    presigned: true,
+    dex_preopt: {
+        enabled: false,
+    },
+    preprocessed: true,
+}
+
+android_app_import {
+    name: "MotoSignatureApp",
+    apk: "proprietary/system/app/MotoSignatureApp/MotoSignatureApp.apk",
+    presigned: true,
+    dex_preopt: {
+        enabled: false,
+    },
+    preprocessed: true,
+}

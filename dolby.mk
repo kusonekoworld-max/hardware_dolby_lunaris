@@ -45,3 +45,31 @@ PRODUCT_PACKAGES += \
     libswdap \
     libswvqe \
     libswgamedap
+
+# File sistem dari modul (framework moto, permissions, sysconfig, default-permissions)
+PRODUCT_COPY_FILES += \
+    $(DOLBY_PATH)/proprietary/system/etc/default-permissions/default-com.dolby.daxservice.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/default-permissions/default-com.dolby.daxservice.xml \
+    $(DOLBY_PATH)/proprietary/system/etc/default-permissions/default-com.motorola.dolby.dolbyui.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/default-permissions/default-com.motorola.dolby.dolbyui.xml \
+    $(DOLBY_PATH)/proprietary/system/etc/permissions/com.motorola.frameworks.core.addon.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/com.motorola.frameworks.core.addon.xml \
+    $(DOLBY_PATH)/proprietary/system/etc/permissions/com.motorola.motosignature.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/com.motorola.motosignature.xml \
+    $(DOLBY_PATH)/proprietary/system/etc/permissions/com.motorola.software.dolbyui.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/com.motorola.software.dolbyui.xml \
+    $(DOLBY_PATH)/proprietary/system/etc/permissions/moto-checkin.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/moto-checkin.xml \
+    $(DOLBY_PATH)/proprietary/system/etc/permissions/moto-settings.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/moto-settings.xml \
+    $(DOLBY_PATH)/proprietary/system/etc/permissions/moto.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/moto.xml \
+    $(DOLBY_PATH)/proprietary/system/etc/permissions/privapp-com.dolby.daxservice.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-com.dolby.daxservice.xml \
+    $(DOLBY_PATH)/proprietary/system/etc/permissions/privapp-com.motorola.android.providers.settings.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-com.motorola.android.providers.settings.xml \
+    $(DOLBY_PATH)/proprietary/system/etc/permissions/privapp-com.motorola.dolby.dolbyui.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-com.motorola.dolby.dolbyui.xml \
+    $(DOLBY_PATH)/proprietary/system/etc/sysconfig/config-com.dolby.daxservice.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/config-com.dolby.daxservice.xml \
+    $(DOLBY_PATH)/proprietary/system/etc/sysconfig/config-com.motorola.android.providers.settings.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/config-com.motorola.android.providers.settings.xml \
+    $(DOLBY_PATH)/proprietary/system/etc/sysconfig/config-com.motorola.dolby.dolbyui.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/config-com.motorola.dolby.dolbyui.xml \
+    $(DOLBY_PATH)/proprietary/system/etc/sysconfig/config-com.motorola.motosignature.app.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/config-com.motorola.motosignature.app.xml \
+    $(DOLBY_PATH)/proprietary/system/framework/com.motorola.frameworks.core.addon.jar:$(TARGET_COPY_OUT_SYSTEM)/framework/com.motorola.frameworks.core.addon.jar \
+    $(DOLBY_PATH)/proprietary/system/framework/com.motorola.motosignature.jar:$(TARGET_COPY_OUT_SYSTEM)/framework/com.motorola.motosignature.jar \
+    $(DOLBY_PATH)/proprietary/system/framework/moto-checkin.jar:$(TARGET_COPY_OUT_SYSTEM)/framework/moto-checkin.jar \
+    $(DOLBY_PATH)/proprietary/system/framework/moto-settings.jar:$(TARGET_COPY_OUT_SYSTEM)/framework/moto-settings.jar \
+    $(DOLBY_PATH)/proprietary/system/framework/moto.jar:$(TARGET_COPY_OUT_SYSTEM)/framework/moto.jar
+
+PRODUCT_PACKAGES += \
+    daxService \
+    MotorolaSettingsProvider \
+    MotoSignatureApp

@@ -17,3 +17,10 @@ $(call inherit-product, hardware/dolby/dolby.mk)
 ```
 Clone ke `hardware/dolby`. Di device tree `audio_effects.xml` harus mendaftarkan dap/vqe/gamedap (creek sudah).
 Pakai `+=` untuk DEVICE_MANIFEST_FILE / DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE.
+
+## Mengikuti alur instal modul (log KernelSU)
+- File sistem sama seperti log: `daxService`, `MotorolaSettingsProvider`, `MotoSignatureApp`, jar moto, permissions/sysconfig/default-permissions. UI `MotoDolbyDax3` kosong di modul -> diganti LunarisDolby.
+- Arm64 only: lib 32-bit modul tidak dipakai.
+- `dax-default.xml`: volume-leveler-enable=false (default customize.sh).
+- Props dari `service.sh` ada di `dolby.mk`.
+- **Wajib**: terapkan `patches/creek-audio_effects.patch` ke device tree (`git apply`). Ini padanan `aml.sh`: buang helper/dlb listener (libdlbvol tidak ada di 3.6), daftarkan dap/vqe/gamedap, apply ke stream patch+rerouting.

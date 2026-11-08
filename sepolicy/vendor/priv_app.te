@@ -1,0 +1,3 @@
+# daxService (priv-app) & app Dolby perlu menemukan dan memanggil DMS HAL (sesuai sepolicy.rule modul)
+allow priv_app hal_dms_hwservice:hwservice_manager find;
+binder_call(priv_app, hal_dms_default)
