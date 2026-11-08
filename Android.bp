@@ -44,12 +44,12 @@ cc_prebuilt_library_shared {
     },
     target: {
         android_arm64: {
-            srcs: ["proprietary/vendor/lib64/libsqlite.so"],
+            srcs: ["proprietary/vendor/lib64/libdlbsql.so"],
             shared_libs: ["liblog"],
         },
     },
     compile_multilib: "64",
-    stem: "libsqlite",
+    stem: "libdlbsql",
     prefer: true,
     soc_specific: true,
 }
