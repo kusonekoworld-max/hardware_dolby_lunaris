@@ -1,0 +1,3 @@
+# efek DAP dimuat di audioserver, perlu akses ke DMS HAL (sesuai sepolicy.rule modul)
+allow audioserver hal_dms_hwservice:hwservice_manager find;
+binder_call(audioserver, hal_dms_default)
