@@ -1,4 +1,2 @@
 allow hal_audio_default hal_dms_hwservice:hwservice_manager find;
 binder_call(hal_audio_default, hal_dms_default)
-
-# dari sepolicy.rule modul Fix_Dolby_Ksu_Lunaris
