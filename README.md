@@ -26,7 +26,7 @@ Use `+=` for DEVICE_MANIFEST_FILE / DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE.
 - arm64 only: the module's 32-bit libs are not used.
 - `dax-default.xml`: volume-leveler-enable=false (default of `customize.sh`).
 - Props from `service.sh` are in `dolby.mk`.
-- **Required**: apply `patches/creek-audio_effects.patch` to the device tree (`git apply`). It is the equivalent of `aml.sh`: removes the helper/dlb listener effects (libdlbvol does not exist in 3.6), registers dap/vqe/gamedap, and applies them to the patch and rerouting streams.
+- **Required**: run `./apply-creek.sh` (applies `patches/creek-audio_effects.patch` to the device tree (`git apply`). It is the equivalent of `aml.sh`: removes the helper/dlb listener effects (libdlbvol does not exist in 3.6), registers dap/vqe/gamedap, and applies them to the patch and rerouting streams.
 - Also like `aml.sh`: replace `AUDIO_OUTPUT_FLAG_RAW` with `AUDIO_OUTPUT_FLAG_NONE` in the device tree's audio policy, and apply the same effect cleanup to every `audio_effects*` file.
 
 ## Dirty flash note
