@@ -74,3 +74,6 @@ PRODUCT_PACKAGES += \
     daxService \
     MotorolaSettingsProvider \
     MotoSignatureApp
+
+# From the module's service.sh
+PRODUCT_SYSTEM_PROPERTIES += ro.audio.ignore_effects=false
