@@ -25,8 +25,6 @@ PRODUCT_COPY_FILES += \
 # Props (sama dengan service.sh modul)
 PRODUCT_VENDOR_PROPERTIES += \
     ro.vendor.dolby.dax.version=DAX3_3.6.0.12_r1 \
-    ro.dolby.mod_uuid=false \
-    ro.dolby.music_stream=false \
     vendor.audio.dolby.ds2.enabled=true \
     vendor.audio.dolby.ds2.hardbypass=true \
     persist.vendor.audio_fx.current=dolby
@@ -76,4 +74,7 @@ PRODUCT_PACKAGES += \
     MotoSignatureApp
 
 # From the module's service.sh
-PRODUCT_SYSTEM_PROPERTIES += ro.audio.ignore_effects=false
+PRODUCT_SYSTEM_PROPERTIES += \
+    ro.audio.ignore_effects=false \
+    ro.dolby.mod_uuid=false \
+    ro.dolby.music_stream=false

@@ -11,7 +11,7 @@ What is carried over from the module:
 - Private vendor sqlite (`libsqlite_dolby`, stem `libdlbsql`)
 - Props: dax.version 3.6.0.12, ds2.enabled/hardbypass=true, persist.vendor.audio_fx.current=dolby, ro.audio.ignore_effects=false
 - sepolicy: audioserver and app domains may find hal_dms_hwservice and call the HAL; app domains may read vendor_audio_prop
-- No 3.7 spatializer and no Codec2 decoders (there is no 3.6 equivalent; the module uses OMX, which does not exist on Android 17). `media_codecs_dolby_audio.xml` is intentionally empty, same as the module.
+- No 3.7 spatializer and no Codec2 decoders (there is no 3.6 equivalent; the module uses OMX, which does not exist on Android 17). `media_codecs_dolby_audio.xml` is intentionally empty (OMX decoders do not exist on Android 17).
 
 ## Usage
 Add to your device makefile:
