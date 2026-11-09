@@ -1,2 +1,6 @@
 allow platform_app hal_dms_hwservice:hwservice_manager find;
 binder_call(platform_app, hal_dms_default)
+
+# Dolby apps read audio props and stat the DMS service (per the module's sepolicy.rule)
+get_prop(platform_app, vendor_audio_prop)
+allow platform_app hal_dms_default_exec:file getattr;
